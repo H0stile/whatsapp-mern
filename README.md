@@ -1,3 +1,8 @@
+A whatsapp clone made with MERN (MongoDB Express.js React Node.js) stack and also firebase (for auth & hosting), to train on fullstack.
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
