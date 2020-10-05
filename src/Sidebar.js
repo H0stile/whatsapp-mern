@@ -5,6 +5,7 @@ import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchOutlined from "@material-ui/icons/Search";
 import { Avatar, IconButton } from "@material-ui/core";
+import SidebarChat from "./SidebarChat.js";
 
 function Sidebar() {
   return (
@@ -30,6 +31,7 @@ function Sidebar() {
         </div>
       </div>
       <div className="sidebar__chats">
+        {/* Have to be careful when create file name because autocompletion can be anoying when you modify it */}
         <SidebarChat />
         <SidebarChat />
         <SidebarChat />
