@@ -22,10 +22,15 @@ function App() {
     });
 
     const channel = pusher.subscribe('messages');
-    channel.bind('inserted', (data) => {
-      alert(JSON.stringify(data));
+    channel.bind('inserted', (newMessage) => {
+      alert(JSON.stringify(newMessage));
+      setMessages([...messages, newMessage])  // "Keep all the messages but also add the new one"
     });
-  }, [])
+    return () => {
+      channel.unbind_all();
+      channel.unsubscribe();
+    }
+  }, [messages])
   console.log(messages)
   return (
     <div className="app">
@@ -33,7 +38,7 @@ function App() {
         {/* Sidebar */}
         <Sidebar />
         {/* Chat component */}
-        <Chat />
+        <Chat messsages={messages}/>
       </div>
     </div>
   );
