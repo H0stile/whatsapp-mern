@@ -9,7 +9,7 @@ import {
 import React from "react";
 import "./Chat.css";
 
-function Chat({messages}) {
+function Chat({ messages }) {
   return (
     <div className="chat">
       <div className="chat__header">
@@ -33,12 +33,12 @@ function Chat({messages}) {
       </div>
       <div className="chat__body">
         {/* Could put messsage as a component */}
-        {messages.map((message) => (
-        <p className={ `chat__message ${message.received && 'chat__receiver'}`}>
-          <span className="chat__name">{message.name}</span>
-          {message.message}
-          <span className="chat__timestamp">{message.timestamp}</span>
-        </p>
+        {messages.map(message => (
+          <p className={`chat__message ${message.received && "chat__receiver"}`}>
+            <span className="chat__name">{message.name}</span>
+              {message.message}
+            <span className="chat__timestamp">{message.timestamp}</span>
+          </p>
         ))}
         
         {/* <p className="chat__message chat__receiver">
