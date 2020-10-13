@@ -81,6 +81,9 @@
 .chat__footer > form > button {
   display: none;
 }
+.chat__footer > form > input {
+  outline: none;
+}
 .chat__footer > .MuiSvgIcon-root {
   margin: 10px;
   color: gray;
